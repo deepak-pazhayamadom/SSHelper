@@ -11,3 +11,5 @@ Depends:
     R (>= 4.6)
 Config/roxygen2/version: 8.1.0
 Encoding: UTF-8
+URL: https://github.com/deepak-pazhayamadom/SSHelper
+BugReports: https://github.com/deepak-pazhayamadom/SSHelper/issues
