@@ -1,0 +1,13 @@
+Package: SSHelper
+Title: SSHelper
+Version: 0.0.1.0
+Authors@R: 
+    c(person(given = "Deepak",
+           family = "Pazhayamadom",
+           role = c("aut", "cre"),
+           email = "deepakgeorgep@gmail.com"))
+Description: Help functions to compile data for SS models
+Depends:
+    R (>= 4.6)
+Config/roxygen2/version: 8.1.0
+Encoding: UTF-8
