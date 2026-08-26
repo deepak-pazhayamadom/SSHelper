@@ -21,7 +21,7 @@ F_to_C <- function(F_temp){
 #' temp1 <- C_to_F(22);
 #' temp2 <- C_to_F( c(-2, 12, 23) );
 #' @export
-C_to_F <- function(C_temp){
+C_to_F <- function(C_temp){#
   F_temp <- (C_temp * 9/5) + 32;
   return(F_temp);
 }
