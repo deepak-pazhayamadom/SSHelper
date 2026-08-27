@@ -2,4 +2,5 @@
 
 export(C_to_F)
 export(F_to_C)
+export(compile_ss_catch)
 export(fill_timeseries)
