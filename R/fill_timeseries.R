@@ -1,24 +1,39 @@
-#' Function to fill discontinuous time series of catch with a user chosen value
+#' Fill gaps in a catch time series
 #'
-#' Years with missing catch will be filled with a value
-#' @param catch.ts A data frame with year in first column and catch in second column. 
-#' @param fleetname An integer or string indicating the fleet type in Stock Synthesis.
-#' @param start.year An integer indicating the first year of the resultant time series.
-#' @param end.year An integer indicating the last year of the resultant time series.
-#' @param value User chosen value to fill the years where there is a missing catch.
-#' @return A dataframe with complete time series of year, fleet and catch
-#' @examples 
-#' year<-c(1,3,5,8,14)
-#' catch<-c(1000,500,300,400,140)
-#' annual.catch<-data.frame(year,catch)
-#' 
+#' Fills missing years in a discontinuous catch time series with a
+#' user-specified catch value. The resulting data frame contains a
+#' continuous sequence of years, the specified Stock Synthesis fleet,
+#' and the corresponding catch values.
+#'
+#' @param catch.ts A data frame containing the catch time series.
+#'   The first column must contain year and the second column must
+#'   contain catch.
+#' @param fleetname An integer or character string identifying the
+#'   Stock Synthesis fleet.
+#' @param start.year An integer specifying the first year of the
+#'   output time series.
+#' @param end.year An integer specifying the last year of the
+#'   output time series.
+#' @param value A numeric value used to fill catch for years that are
+#'   missing from \code{catch.ts}.
+#'
+#' @return A data frame containing a complete sequence of years,
+#'   the specified fleet, and catch values. Observed catch values are
+#'   retained, and missing years are filled with \code{value}.
+#'
+#' @examples
+#' year <- c(1, 3, 5, 8, 14)
+#' catch <- c(1000, 500, 300, 400, 140)
+#' annual.catch <- data.frame(year, catch)
+#'
 #' fill_timeseries(
-#'                 catch.ts  =annual.catch,
-#'                 fleetname =1,
-#'                 start.year=1,
-#'                 end.year  =20,
-#'                 value     =10
-#'                )
+#'   catch.ts = annual.catch,
+#'   fleetname = 1,
+#'   start.year = 1,
+#'   end.year = 20,
+#'   value = 10
+#' )
+#'
 #' @export
 
 fill_timeseries <- function(catch.ts, fleetname, start.year, end.year,value){
