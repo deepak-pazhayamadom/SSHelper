@@ -1,4 +1,4 @@
-#' Fahrenheit conversion#
+#' Fahrenheit conversion
 #'
 #' Convert degrees Fahrenheit temperatures to degrees Celsius
 #' @param F_temp The temperature in degrees Fahrenheit
