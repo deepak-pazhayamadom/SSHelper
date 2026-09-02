@@ -7,8 +7,8 @@
 plot_catch_cpue(
   catch_data,
   cpue_data,
-  catch_col = "Catch",
-  year_col = "Year",
+  catch_col = "catch",
+  year_col = "year",
   cpue_year_col = "Year",
   cpue_index_col = "Index",
   x_tick = 2,
@@ -54,16 +54,16 @@ set.seed(124)
 years <- 1950:2022
 
 catch_data <- data.frame(
-  Year = rep(years, each = 2),
+  year = rep(years, each = 2),
   fleet = rep(c("Fleet 1", "Fleet 2"), length(years))
 )
 
 # Simulate catch with increasing catch through time
-catch_data$Catch <- ifelse(
-  catch_data$Year < 1980,
+catch_data$catch <- ifelse(
+  catch_data$year < 1980,
   runif(nrow(catch_data), 5, 30),
   ifelse(
-    catch_data$Year < 1995,
+    catch_data$year < 1995,
     runif(nrow(catch_data), 30, 150),
     runif(nrow(catch_data), 150, 500)
   )
