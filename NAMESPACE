@@ -2,6 +2,7 @@
 
 export(compile_ss_catch)
 export(fill_timeseries)
+export(length_bin_ss)
 export(loess_cpue_multi)
 export(plot_catch_cpue)
 importFrom(rlang,.data)
