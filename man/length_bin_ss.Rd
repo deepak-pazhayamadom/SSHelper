@@ -13,16 +13,16 @@ identifier.}
 
 \item{int}{Numeric value specifying the length-bin interval.}
 
-\item{month}{Integer indicating the month associated with the time step.}
+\item{month}{Integer indicating the month within a season (typically 1 season of 12 months within a year).}
 
 \item{fleet}{Integer indicating the fleet number used in Stock Synthesis.}
 
 \item{sex}{Integer indicating sex composition:
-\code{0} = unsexed, \code{1} = female, \code{2} = male,
+\code{0} = combined, \code{1} = females only, \code{2} = males only,
 \code{3} = sex ratio preserved.}
 
 \item{part}{Integer indicating the sample component:
-\code{0} = combined, \code{1} = discard, \code{2} = retained.}
+\code{0} = combined, \code{1} = discards only, \code{2} = retained only.}
 
 \item{max_len}{Numeric value specifying the upper limit used to define
 the length bins. If \code{NULL}, the maximum observed length is used.}
