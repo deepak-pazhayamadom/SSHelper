@@ -2,6 +2,7 @@
 
 export(SS3_logistic_from_L50L95)
 export(compile_ss_catch)
+export(estLmin)
 export(estimate_logistic_from_lengths)
 export(fill_timeseries)
 export(length_bin_ss)
